@@ -10,9 +10,9 @@ algoritmo para.*/
 
  main()
 {
-  int sexo, i,H=0,M=0,idade,idadeh=0,idadem=0,idademaior=0; 
+  int sexo, i=1,H=0,M=0,idade,idadeh=0,idadem=0,idademaior=0,intervalo=0; 
   
-  for(i=1;i<=3;i++)
+	while(i!=0)
   {
     	
   	
@@ -36,7 +36,24 @@ algoritmo para.*/
   		
 		  idademaior=idademaior;	
 		  }	
-
+		  
+		  
+		  
+		  	if(idade>=18 && idade<=35){
+  			
+  			intervalo=intervalo +1;	
+		  }
+  		else{
+  		
+		  	intervalo=intervalo;	
+		  }	
+		  
+		  
+		printf("\nDigite 0 para parar o programar parar \n");
+  			scanf("%d", &i);
+		
+	
+  
 	H=H+1;
 	idadeh=idadeh +idade;
 	
@@ -58,6 +75,21 @@ algoritmo para.*/
   		
 		  idademaior=idademaior;	
 		  }	
+		  
+		    	if(idade>=18 && idade<=35){
+  			
+  				intervalo=intervalo +1;	
+		  }
+  		else{
+  		
+		  		intervalo=intervalo;	
+		  }	
+		  
+		  
+			
+		printf("\nDigite 0 para parar o programar parar \n");
+  			scanf("%d", &i);
+	
 
 	M=M+1;
 	idadem=idadem +idade;
@@ -71,10 +103,14 @@ algoritmo para.*/
      default :
     printf ("Valor invalido!\n");
 
+
+
  }
+
+}  	
 	
-}  		
-    
-  printf("\nMaior idade e :%d \n",idademaior);
-  printf("\nMedia de idade dos homens:%d \n",idadeh/H);
+ 		printf("Programa Finalizado!\n");
+        printf("\nMaior idade e :%d \n",idademaior);
+  		printf("\nMedia de idade dos homens:%d \n",idadeh/H);  
+ 		printf("\nNumero de pessoas entre  18 e 35 e:%d \n",intervalo); 
 }
